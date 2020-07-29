@@ -5,9 +5,9 @@ applications:
     memory: 256M
     disk_quota: 512M
     routes:
-      - route: allocations-pal-[initials].apps.evans.pal.pivotal.io
+      - route: allocations-pal-alpha.cfapps.io
     path: Applications/AllocationsServer/bin/Release/netcoreapp3.1/publish
     env:
-      REGISTRATION_SERVER_ENDPOINT: https://registration-pal-[initials].apps.evans.pal.pivotal.io
+      REGISTRATION_SERVER_ENDPOINT: https://registration-pal-alpha.cfapps.io
     services:
       - tracker-allocations-database
