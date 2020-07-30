@@ -6,6 +6,8 @@
 
   <ItemGroup>
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.1.1" />
+    <PackageReference Include="Steeltoe.CircuitBreaker.Hystrix.MetricsEventsCore" Version="2.4.2" />
+    <PackageReference Include="Steeltoe.CircuitBreaker.HystrixCore" Version="2.4.2" />
     <PackageReference Include="Steeltoe.CloudFoundry.Connector.EFCore" Version="2.4.2" />
   </ItemGroup>
 
