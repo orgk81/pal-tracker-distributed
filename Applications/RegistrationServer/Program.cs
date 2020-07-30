@@ -3,6 +3,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Steeltoe.Extensions.Configuration.CloudFoundry;
 using Steeltoe.Extensions.Logging;
+using Steeltoe.Common.Hosting;
 
 namespace RegistrationServer
 {
@@ -15,6 +16,7 @@ namespace RegistrationServer
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
+                .UseCloudHosting()
                 .AddCloudFoundry()
                 .ConfigureWebHostDefaults(webBuilder =>
                 {

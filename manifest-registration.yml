@@ -8,4 +8,4 @@ applications:
       - route: registration-pal-alpha.cfapps.io
     path: Applications/RegistrationServer/bin/Release/netcoreapp3.1/publish
     services:
-      - tracker-registration-database
+      - tracker-service-registry

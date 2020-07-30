@@ -9,6 +9,8 @@ using Projects.Data;
 using Steeltoe.CloudFoundry.Connector.MySql.EFCore;
 using Steeltoe.Management.CloudFoundry;
 using Users.Data;
+using Steeltoe.Discovery.Client;
+
 
 namespace RegistrationServer
 {
@@ -36,8 +38,9 @@ namespace RegistrationServer
 
             services.AddScoped<IProjectDataGateway, ProjectDataGateway>();
             services.AddDbContext<ProjectContext>(options => options.UseMySql(Configuration));
-            
+
             services.AddScoped<IRegistrationService, RegistrationService>();
+            services.AddDiscoveryClient(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -58,6 +61,7 @@ namespace RegistrationServer
             {
                 endpoints.MapControllers();
             });
+             app.UseDiscoveryClient();
         }
     }
 }

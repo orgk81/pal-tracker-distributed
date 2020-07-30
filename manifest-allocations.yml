@@ -10,4 +10,4 @@ applications:
     env:
       REGISTRATION_SERVER_ENDPOINT: https://registration-pal-alpha.cfapps.io
     services:
-      - tracker-allocations-database
+      - tracker-service-registry
