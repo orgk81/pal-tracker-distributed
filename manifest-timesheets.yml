@@ -9,3 +9,4 @@ applications:
     path: Applications/TimesheetsServer/bin/Release/netcoreapp3.1/publish
     services:
       - tracker-service-registry
+      - tracker-sso
